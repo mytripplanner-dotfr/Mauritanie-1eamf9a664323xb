@@ -1,0 +1,829 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventure relaxante au cœur du désert mauritanien </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token="/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Nouakchott, première immersion</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Découverte de Nouakchott et de ses saveurs marines</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Vers le Parc National du Banc d'Arguin</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Observation ornithologique et paysages côtiers</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Vol vers Atar, porte du désert de l'Adrar</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Oasis de Terjit, havre de paix</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Chinguetti, la cité du désert et ses manuscrits</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Détente et nuit étoilée à Chinguetti</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Ouadane, l'ancienne cité caravanière</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Autour d'Ouadane, entre oasis et désert</a>
+            
+                <a href="#jour-11" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J11 L'oasis de Mhaïrith, un écrin de verdure</a>
+            
+                <a href="#jour-12" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J12 Nuit en bivouac sous les étoiles</a>
+            
+                <a href="#jour-13" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J13 Randonnée douce et exploration du désert</a>
+            
+                <a href="#jour-14" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J14 Retour à Nouakchott, fin de l'aventure désertique</a>
+            
+                <a href="#jour-15" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J15 Journée libre et shopping à Nouakchott</a>
+            
+                <a href="#jour-16" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J16 Excursion relaxante à la plage de Nouakchott</a>
+            
+                <a href="#jour-17" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J17 Découverte des mosquées et de l'architecture locale</a>
+            
+                <a href="#jour-18" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J18 Art et culture mauritanienne</a>
+            
+                <a href="#jour-19" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J19 Journée de bien-être et relaxation</a>
+            
+                <a href="#jour-20" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J20 Préparation au départ et derniers instants</a>
+            
+                <a href="#jour-21" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J21 Départ de Nouakchott</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">MAURITANIE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Aventure relaxante au cœur du désert mauritanien</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 21 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 3850 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 9h05 (depuis Herve, belgique, avec escale)</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Nouakchott, première immersion</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un vol confortable, atterrissez à Nouakchott, la capitale mauritanienne. Prenez le temps de vous installer et de vous imprégner de l'ambiance locale avec une balade douce en fin de journée.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬 Arrivée à Nouakchott</strong>: Transfert et installation à votre hôtel pour un repos bien mérité.</li><li><strong>🚶‍♂️ Balade au marché des artisans</strong>: Découvrez l'artisanat local et les couleurs vibrantes de la ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ À savoir</p>
+                                <p class="text-gray-700">Le visa est obligatoire pour la Mauritanie. Il peut être obtenu à l'arrivée à l'aéroport de Nouakchott.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte de Nouakchott et de ses saveurs marines</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez le cœur vibrant de Nouakchott, de son marché aux poissons animé à ses musées, avant de vous détendre sur la plage au coucher du soleil.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🐟 Visite du marché aux poissons</strong>: Observez le retour des pêcheurs et l'effervescence de la vente.</li><li><strong>🏛️ Musée National de Mauritanie</strong>: Plongez dans l'histoire et la culture du pays.</li><li><strong>🌅 Détente à la plage de Nouakchott</strong>: Profitez d'une balade apaisante en fin de journée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Le marché aux poissons est très animé le matin, idéal pour des photos authentiques. Prévoyez des chaussures fermées.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vers le Parc National du Banc d'Arguin</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Départ pour le Parc National du Banc d'Arguin, un site classé au patrimoine mondial de l'UNESCO. Préparez-vous à une immersion totale dans la nature et l'observation d'oiseaux migrateurs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Trajet vers le Banc d'Arguin</strong>: Un voyage en 4x4 à travers des paysages désertiques et côtiers.</li><li><strong>🛏️ Installation au campement</strong>: Profitez d'un hébergement simple et authentique au cœur du parc.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Logistique</p>
+                                <p class="text-gray-700">Le Banc d'Arguin est une zone protégée. L'accès se fait uniquement avec un guide local et un véhicule 4x4 adapté.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Observation ornithologique et paysages côtiers</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Passez la journée à explorer les merveilles du Banc d'Arguin, un paradis pour les oiseaux. Profitez de balades douces et de moments de contemplation.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛵ Excursion en pirogue traditionnelle</strong>: Naviguez dans les eaux calmes pour observer les oiseaux de près.</li><li><strong>🚶‍♀️ Balade sur les plages désertes</strong>: Admirez les paysages uniques et la tranquillité des lieux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Photographie</p>
+                                <p class="text-gray-700">N'oubliez pas vos jumelles et un bon appareil photo pour immortaliser les milliers d'oiseaux migrateurs.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Vol vers Atar, porte du désert de l'Adrar</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittez les côtes pour vous envoler vers Atar, la capitale de l'Adrar. Cette transition marque le début de votre exploration des ksour anciens et des paysages désertiques.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>✈️ Vol interne vers Atar</strong>: Un court vol pour rejoindre le cœur du désert.</li><li><strong>🚶‍♂️ Découverte du marché d'Atar</strong>: Flânez dans les allées et imprégnez-vous de l'ambiance locale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Transport</p>
+                                <p class="text-gray-700">Les vols internes sont le moyen le plus rapide et confortable pour traverser de grandes distances en Mauritanie.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Oasis de Terjit, havre de paix</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, direction l'oasis de Terjit, un véritable joyau niché au creux des montagnes. Profitez de ses sources naturelles et de son atmosphère apaisante.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Trajet vers l'oasis de Terjit</strong>: Une route pittoresque à travers les paysages de l'Adrar.</li><li><strong>💧 Baignade dans les sources naturelles</strong>: Détendez-vous dans les eaux fraîches de l'oasis.</li><li><strong>🚶‍♀️ Balade dans la palmeraie</strong>: Profitez de l'ombre et de la sérénité des lieux.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌿 Nature</p>
+                                <p class="text-gray-700">Terjit est réputée pour être l'une des plus belles oasis de Mauritanie, offrant une pause rafraîchissante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Chinguetti, la cité du désert et ses manuscrits</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Découvrez Chinguetti, septième ville sainte de l'Islam et site UNESCO. Flânez dans ses ruelles anciennes et visitez ses bibliothèques millénaires.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Trajet vers Chinguetti</strong>: Une route emblématique à travers les dunes.</li><li><strong>🏛️ Exploration de la vieille ville</strong>: Admirez l'architecture en pierre sèche et les mosquées anciennes.</li><li><strong>📖 Visite des bibliothèques de manuscrits</strong>: Découvrez des trésors de savoir ancestral.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📜 Culture</p>
+                                <p class="text-gray-700">Les bibliothèques de Chinguetti abritent des manuscrits rares, témoins de l'âge d'or intellectuel de la région.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Détente et nuit étoilée à Chinguetti</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée plus calme à Chinguetti, en vous imprégnant de l'atmosphère unique de cette ville du désert. Terminez la journée par une observation des étoiles.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚶‍♀️ Balade douce dans les dunes environnantes</strong>: Admirez le coucher de soleil sur le désert.</li><li><strong>☕ Thé à la menthe avec les habitants</strong>: Partagez un moment d'échange culturel.</li><li><strong>✨ Observation des étoiles</strong>: Loin de toute pollution lumineuse, le ciel est spectaculaire.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧘 Relaxation</p>
+                                <p class="text-gray-700">Le désert offre un silence et une immensité propices à la méditation et à la déconnexion.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Ouadane, l'ancienne cité caravanière</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Poursuivez votre voyage vers Ouadane, une autre cité caravanière classée UNESCO. Explorez ses ruines imposantes et imaginez la vie d'antan.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Trajet vers Ouadane</strong>: Une route désertique offrant des panoramas grandioses.</li><li><strong>🏛️ Exploration des ruines de la vieille ville</strong>: Découvrez les vestiges d'une civilisation florissante.</li><li><strong>🚶‍♂️ Promenade dans la palmeraie</strong>: Profitez de la fraîcheur des dattiers.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌍 Patrimoine</p>
+                                <p class="text-gray-700">Ouadane était un carrefour commercial majeur sur la route transsaharienne, témoignant de l'importance des ksour.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Autour d'Ouadane, entre oasis et désert</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée pour explorer les environs d'Ouadane, entre les oasis verdoyantes et les étendues de sable. Une immersion douce dans le quotidien du désert.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚶‍♀️ Randonnée douce vers une oasis voisine</strong>: Découvrez des paysages cachés et des villages isolés.</li><li><strong>🐪 Courte balade à dos de chameau</strong>: Une expérience authentique et relaxante dans les dunes.</li><li><strong>🌅 Coucher de soleil sur les ruines d'Ouadane</strong>: Un spectacle inoubliable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Les balades à dos de chameau sont une excellente façon de découvrir le désert à un rythme paisible.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-11" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 11</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">L'oasis de Mhaïrith, un écrin de verdure</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Direction l'oasis de Mhaïrith, un autre havre de paix au cœur du désert. Profitez de sa beauté naturelle et de son calme absolu pour une journée de pure détente.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Trajet vers l'oasis de Mhaïrith</strong>: Une route scénique à travers les paysages de l'Adrar.</li><li><strong>🚶‍♀️ Exploration de l'oasis</strong>: Admirez les palmiers et les sources d'eau.</li><li><strong>🧘 Moment de quiétude</strong>: Laissez-vous bercer par le silence du désert.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour11.jpg" class="w-full h-64 object-cover" alt="Jour 11">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💚 Bien-être</p>
+                                <p class="text-gray-700">Les oasis sont des lieux magiques pour se ressourcer, loin de l'agitation du monde moderne.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-12" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 12</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nuit en bivouac sous les étoiles</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Vivez une expérience inoubliable en passant une nuit en bivouac dans le désert. Loin de tout, le silence et le ciel étoilé vous offriront un spectacle grandiose.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚗 Installation du campement</strong>: Participez à la mise en place de votre bivouac.</li><li><strong>🔥 Dîner traditionnel autour du feu</strong>: Savourez un repas préparé sur place.</li><li><strong>✨ Nuit sous les étoiles</strong>: Une expérience magique et apaisante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour12.jpg" class="w-full h-64 object-cover" alt="Jour 12">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌌 Expérience</p>
+                                <p class="text-gray-700">Le ciel du désert est l'un des plus purs au monde, offrant une vue imprenable sur la Voie Lactée.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-13" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 13</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Randonnée douce et exploration du désert</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après une nuit sous les étoiles, profitez d'une matinée de randonnée douce dans les paysages désertiques. Découvrez la faune et la flore adaptées à cet environnement unique.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚶‍♀️ Randonnée matinale</strong>: Explorez les dunes et les formations rocheuses à votre rythme.</li><li><strong>🥪 Pique-nique dans le désert</strong>: Un repas simple mais savoureux au milieu de nulle part.</li><li><strong>🚗 Retour vers Atar</strong>: Reprenez la route vers la ville pour une nuit plus confortable.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour13.jpg" class="w-full h-64 object-cover" alt="Jour 13">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👟 Équipement</p>
+                                <p class="text-gray-700">Prévoyez de bonnes chaussures de marche et suffisamment d'eau pour les excursions dans le désert.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-14" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 14</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retour à Nouakchott, fin de l'aventure désertique</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après avoir exploré les merveilles de l'Adrar, reprenez un vol interne pour Nouakchott. Profitez de cette journée pour vous reposer et vous remémorer vos souvenirs du désert.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>✈️ Vol interne Atar-Nouakchott</strong>: Un retour rapide à la capitale.</li><li><strong>🛏️ Détente à l'hôtel</strong>: Reposez-vous après les journées d'exploration.</li><li><strong>🍽️ Dîner dans un restaurant local</strong>: Savourez les saveurs de la ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour14.jpg" class="w-full h-64 object-cover" alt="Jour 14">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Les restaurants à Nouakchott offrent une variété de plats locaux et internationaux. N'hésitez pas à demander des recommandations.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-15" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 15</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée libre et shopping à Nouakchott</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez d'une journée libre pour explorer Nouakchott à votre guise. Faites du shopping pour des souvenirs, visitez des galeries d'art ou détendez-vous dans un café.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛍️ Achat de souvenirs</strong>: Trouvez des objets artisanaux uniques au marché.</li><li><strong>☕ Pause café</strong>: Détendez-vous dans l'un des cafés de la ville.</li><li><strong>🚶‍♂️ Balade dans les quartiers résidentiels</strong>: Observez la vie quotidienne mauritanienne.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour15.jpg" class="w-full h-64 object-cover" alt="Jour 15">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎁 Souvenirs</p>
+                                <p class="text-gray-700">Les bijoux en argent, les tissus teints et les articles en cuir sont des souvenirs populaires et authentiques.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-16" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 16</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excursion relaxante à la plage de Nouakchott</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Passez une journée paisible au bord de l'océan Atlantique. La plage de Nouakchott offre un cadre idéal pour la détente, les balades et l'observation des pêcheurs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏖️ Détente sur la plage</strong>: Profitez du soleil et de la brise marine.</li><li><strong>🚶‍♀️ Longue balade le long du rivage</strong>: Observez les activités des pêcheurs locaux.</li><li><strong>🌅 Coucher de soleil sur l'Atlantique</strong>: Un moment magique pour clore la journée.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour16.jpg" class="w-full h-64 object-cover" alt="Jour 16">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Culture locale</p>
+                                <p class="text-gray-700">Respectez les coutumes locales en matière de tenue vestimentaire, même à la plage.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-17" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 17</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Découverte des mosquées et de l'architecture locale</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Explorez l'aspect religieux et architectural de Nouakchott en visitant ses mosquées emblématiques et en admirant l'architecture moderne et traditionnelle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🕌 Visite de la Grande Mosquée</strong>: Admirez l'architecture islamique (de l'extérieur pour les non-musulmans).</li><li><strong>🚶‍♂️ Promenade architecturale</strong>: Découvrez les bâtiments modernes et les maisons traditionnelles.</li><li><strong>📚 Visite de la Bibliothèque Nationale</strong>: Un aperçu de la culture écrite mauritanienne.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour17.jpg" class="w-full h-64 object-cover" alt="Jour 17">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🙏 Respect</p>
+                                <p class="text-gray-700">Lors de la visite de lieux de culte, une tenue respectueuse est de mise (épaules et genoux couverts).</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-18" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 18</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Art et culture mauritanienne</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez dans la scène artistique et culturelle de Nouakchott. Visitez des galeries, rencontrez des artistes locaux et découvrez l'expression créative du pays.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🖼️ Visite de galeries d'art locales</strong>: Découvrez l'art contemporain mauritanien.</li><li><strong>🎶 Rencontre avec des musiciens traditionnels</strong>: Écoutez les mélodies du désert.</li><li><strong>🍽️ Dégustation de spécialités locales</strong>: Un dîner pour savourer les saveurs authentiques.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour18.jpg" class="w-full h-64 object-cover" alt="Jour 18">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🎵 Musique</p>
+                                <p class="text-gray-700">La musique mauritanienne, souvent jouée avec le tidinit (luth) et l'ardin (harpe), est riche et envoûtante.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-19" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 19</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Journée de bien-être et relaxation</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après ces jours d'exploration, offrez-vous une journée dédiée au bien-être. Profitez d'un massage, d'une séance de yoga ou simplement d'un moment de calme.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>💆‍♀️ Séance de massage relaxant</strong>: Détendez vos muscles après les voyages.</li><li><strong>📚 Lecture et repos</strong>: Profitez du calme de votre hébergement ou d'un jardin.</li><li><strong>🚶‍♂️ Balade au crépuscule</strong>: Une dernière promenade douce pour apprécier l'ambiance de la ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour19.jpg" class="w-full h-64 object-cover" alt="Jour 19">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌸 Détente</p>
+                                <p class="text-gray-700">Certains hôtels proposent des services de spa ou de bien-être, parfaits pour se ressourcer.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-20" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 20</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Préparation au départ et derniers instants</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Profitez de cette dernière journée pour finaliser vos achats de souvenirs, revoir vos lieux préférés ou simplement vous détendre avant votre vol de retour.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛍️ Derniers achats de souvenirs</strong>: Trouvez les derniers cadeaux ou objets pour vous-même.</li><li><strong>☕ Café et contemplation</strong>: Prenez un dernier café en observant la vie locale.</li><li><strong>🧳 Préparation des bagages</strong>: Organisez vos affaires pour le départ du lendemain.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour20.jpg" class="w-full h-64 object-cover" alt="Jour 20">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Conseil</p>
+                                <p class="text-gray-700">Vérifiez les restrictions de poids et de taille de bagages de votre compagnie aérienne pour éviter les surprises.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-21" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 21</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Départ de Nouakchott</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le moment de dire au revoir à la Mauritanie. Après un petit-déjeuner, transfert à l'aéroport pour votre vol retour, la tête remplie de souvenirs inoubliables.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🍳 Petit-déjeuner</strong>: Profitez d'un dernier repas mauritanien.</li><li><strong>🚗 Transfert à l'aéroport</strong>: Rejoignez l'aéroport pour votre vol.</li><li><strong>🛫 Vol retour</strong>: Départ de Nouakchott vers votre destination.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Mauritanie-1eamf9a664323xb/main/jour21.jpg" class="w-full h-64 object-cover" alt="Jour 21">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👋 Au revoir</p>
+                                <p class="text-gray-700">La Mauritanie, avec ses paysages désertiques et sa culture riche, laissera une empreinte durable dans vos souvenirs.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛬 Budget vol: </strong>A partir de 649 €/pers</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🚆 Budget transports: </strong>Environ 1300 €/pers (vols internes, 4x4 avec chauffeur)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥗 Budget repas: </strong>Environ 800 €/pers (30-50€/jour)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛏️ Budget logement: </strong>Environ 700 €/pers (3* hôtels/auberges)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🎭 Budget activités: </strong>Environ 400 €/pers (entrées, guides, excursions)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Novembre à Mars</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Avril et Octobre (plus chaud mais faisable)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">☀️ Le climat est désertique. Prévoir des vêtements légers et amples, un chapeau, des lunettes de soleil et de la crème solaire. Les nuits dans le désert peuvent être fraîches, même en mai.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 La monnaie est l'Ouguiya mauritanienne (MRU). Les cartes de crédit sont acceptées dans les grands hôtels et restaurants de Nouakchott, mais le liquide est indispensable en dehors de la capitale.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ Le français est largement parlé, surtout dans les zones touristiques et urbaines. L'arabe est la langue officielle.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🛂 Un visa est obligatoire pour les citoyens belges. Il peut être obtenu à l'arrivée à l'aéroport de Nouakchott. Vérifiez les dernières exigences avant le départ.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💧 L'eau du robinet n'est pas potable. Consommez uniquement de l'eau en bouteille. Prévoyez des médicaments de base et un répulsif anti-moustiques.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Anecdotes
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🚂 Le train le plus long du monde:</strong> La Mauritanie abrite l'un des trains les plus longs et les plus lourds du monde, le train minéralier. Il transporte du minerai de fer sur plus de 700 km à travers le désert, et il est parfois possible de voyager à son bord, sur les wagons de minerai, pour une expérience hors du commun!</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>👁️ L'Œil de l'Afrique:</strong> La structure de Richat, surnommée l'Œil de l'Afrique, est une formation géologique circulaire de 50 km de diamètre visible depuis l'espace. Son origine reste un mystère fascinant, entre cratère d'impact et dôme érodé.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Spécialités culinaires
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍴 Thieboudienne:</strong> Bien que d'origine sénégalaise, ce plat de riz au poisson et légumes est très populaire en Mauritanie. Un délice savoureux et nourrissant.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍖 Mechoui:</strong> De l'agneau ou du chameau rôti lentement à la broche, souvent servi lors des grandes occasions. La viande est tendre et parfumée, un vrai régal.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥛 Zrig:</strong> Une boisson rafraîchissante à base de lait de chamelle frais, souvent servie avec du sucre. Une spécialité locale à ne pas manquer pour une immersion culturelle.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Mauritanie-1eamf9a664323xb/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/BRU-NKC/2026-05-04/2026-05-25" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://www.tourisme.mr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Office National du Tourisme Mauritanien</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/mr/mauritania-weather" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo Mauritanie</strong></a></li>
+                    
+                        <li><a href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/mauritanie/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>⚠️ France Diplomatie - Mauritanie</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
