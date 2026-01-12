@@ -1,0 +1,668 @@
+{
+  "pays": "Mauritanie",
+  "drapeau": "🇲🇷",
+  "symbole": "🐪",
+  "titre": "Aventure relaxante au cœur du désert mauritanien",
+  "budget_total": "Environ 3850 €/personne",
+  "duree": "21 jours",
+  "temps_vol": "9h05 (depuis Herve, belgique, avec escale)",
+  "escale": "1",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Nouakchott, première immersion",
+      "legende": "Après un vol confortable, atterrissez à Nouakchott, la capitale mauritanienne. Prenez le temps de vous installer et de vous imprégner de l'ambiance locale avec une balade douce en fin de journée.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>🛬 Arrivée à Nouakchott</strong>: Transfert et installation à votre hôtel pour un repos bien mérité.",
+        "<strong>🚶‍♂️ Balade au marché des artisans</strong>: Découvrez l'artisanat local et les couleurs vibrantes de la ville."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport International de Nouakchott-Oumtounsy, Nouakchott",
+          "categorie": "Aéroport",
+          "coords": { "lat": 19.9608, "lng": -14.4897 }
+        },
+        {
+          "nom_recherche": "Marché des Artisans, Nouakchott",
+          "categorie": "Marché",
+          "coords": { "lat": 18.0825, "lng": -15.9765 }
+        }
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "À savoir",
+          "texte": "Le visa est obligatoire pour la Mauritanie. Il peut être obtenu à l'arrivée à l'aéroport de Nouakchott."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🐟",
+      "titre": "Découverte de Nouakchott et de ses saveurs marines",
+      "legende": "Explorez le cœur vibrant de Nouakchott, de son marché aux poissons animé à ses musées, avant de vous détendre sur la plage au coucher du soleil.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>🐟 Visite du marché aux poissons</strong>: Observez le retour des pêcheurs et l'effervescence de la vente.",
+        "<strong>🏛️ Musée National de Mauritanie</strong>: Plongez dans l'histoire et la culture du pays.",
+        "<strong>🌅 Détente à la plage de Nouakchott</strong>: Profitez d'une balade apaisante en fin de journée."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Marché aux Poissons, Nouakchott",
+          "categorie": "Marché",
+          "coords": { "lat": 18.0801, "lng": -16.0002 }
+        },
+        {
+          "nom_recherche": "Musée National de Mauritanie, Nouakchott",
+          "categorie": "Musée",
+          "coords": { "lat": 18.0823, "lng": -15.9768 }
+        },
+        {
+          "nom_recherche": "Plage de Nouakchott",
+          "categorie": "Plage",
+          "coords": { "lat": 18.0770, "lng": -16.0030 }
+        }
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Le marché aux poissons est très animé le matin, idéal pour des photos authentiques. Prévoyez des chaussures fermées."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🦅",
+      "titre": "Vers le Parc National du Banc d'Arguin",
+      "legende": "Départ pour le Parc National du Banc d'Arguin, un site classé au patrimoine mondial de l'UNESCO. Préparez-vous à une immersion totale dans la nature et l'observation d'oiseaux migrateurs.",
+      "lieu": "Parc National du Banc d'Arguin",
+      "activites": [
+        "<strong>🚗 Trajet vers le Banc d'Arguin</strong>: Un voyage en 4x4 à travers des paysages désertiques et côtiers.",
+        "<strong>🛏️ Installation au campement</strong>: Profitez d'un hébergement simple et authentique au cœur du parc."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Parc National du Banc d'Arguin",
+          "categorie": "Parc National",
+          "coords": { "lat": 20.2500, "lng": -16.0000 }
+        }
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Logistique",
+          "texte": "Le Banc d'Arguin est une zone protégée. L'accès se fait uniquement avec un guide local et un véhicule 4x4 adapté."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🐦",
+      "titre": "Observation ornithologique et paysages côtiers",
+      "legende": "Passez la journée à explorer les merveilles du Banc d'Arguin, un paradis pour les oiseaux. Profitez de balades douces et de moments de contemplation.",
+      "lieu": "Parc National du Banc d'Arguin",
+      "activites": [
+        "<strong>⛵ Excursion en pirogue traditionnelle</strong>: Naviguez dans les eaux calmes pour observer les oiseaux de près.",
+        "<strong>🚶‍♀️ Balade sur les plages désertes</strong>: Admirez les paysages uniques et la tranquillité des lieux."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Parc National du Banc d'Arguin",
+          "categorie": "Parc National",
+          "coords": { "lat": 20.2500, "lng": -16.0000 }
+        }
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "📸",
+          "titre": "Photographie",
+          "texte": "N'oubliez pas vos jumelles et un bon appareil photo pour immortaliser les milliers d'oiseaux migrateurs."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "✈️",
+      "titre": "Vol vers Atar, porte du désert de l'Adrar",
+      "legende": "Quittez les côtes pour vous envoler vers Atar, la capitale de l'Adrar. Cette transition marque le début de votre exploration des ksour anciens et des paysages désertiques.",
+      "lieu": "Atar",
+      "activites": [
+        "<strong>✈️ Vol interne vers Atar</strong>: Un court vol pour rejoindre le cœur du désert.",
+        "<strong>🚶‍♂️ Découverte du marché d'Atar</strong>: Flânez dans les allées et imprégnez-vous de l'ambiance locale."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport d'Atar, Atar",
+          "categorie": "Aéroport",
+          "coords": { "lat": 20.5000, "lng": -13.0500 }
+        },
+        {
+          "nom_recherche": "Marché d'Atar, Atar",
+          "categorie": "Marché",
+          "coords": { "lat": 20.5130, "lng": -13.0480 }
+        }
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Transport",
+          "texte": "Les vols internes sont le moyen le plus rapide et confortable pour traverser de grandes distances en Mauritanie."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🌴",
+      "titre": "Oasis de Terjit, havre de paix",
+      "legende": "Aujourd'hui, direction l'oasis de Terjit, un véritable joyau niché au creux des montagnes. Profitez de ses sources naturelles et de son atmosphère apaisante.",
+      "lieu": "Oasis de Terjit",
+      "activites": [
+        "<strong>🚗 Trajet vers l'oasis de Terjit</strong>: Une route pittoresque à travers les paysages de l'Adrar.",
+        "<strong>💧 Baignade dans les sources naturelles</strong>: Détendez-vous dans les eaux fraîches de l'oasis.",
+        "<strong>🚶‍♀️ Balade dans la palmeraie</strong>: Profitez de l'ombre et de la sérénité des lieux."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Oasis de Terjit",
+          "categorie": "Oasis",
+          "coords": { "lat": 20.2460, "lng": -14.0720 }
+        }
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🌿",
+          "titre": "Nature",
+          "texte": "Terjit est réputée pour être l'une des plus belles oasis de Mauritanie, offrant une pause rafraîchissante."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "📚",
+      "titre": "Chinguetti, la cité du désert et ses manuscrits",
+      "legende": "Découvrez Chinguetti, septième ville sainte de l'Islam et site UNESCO. Flânez dans ses ruelles anciennes et visitez ses bibliothèques millénaires.",
+      "lieu": "Chinguetti",
+      "activites": [
+        "<strong>🚗 Trajet vers Chinguetti</strong>: Une route emblématique à travers les dunes.",
+        "<strong>🏛️ Exploration de la vieille ville</strong>: Admirez l'architecture en pierre sèche et les mosquées anciennes.",
+        "<strong>📖 Visite des bibliothèques de manuscrits</strong>: Découvrez des trésors de savoir ancestral."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Chinguetti",
+          "categorie": "Ville historique",
+          "coords": { "lat": 20.4500, "lng": -12.3667 }
+        },
+        {
+          "nom_recherche": "Bibliothèque de Chinguetti",
+          "categorie": "Bibliothèque",
+          "coords": { "lat": 20.4500, "lng": -12.3667 }
+        }
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "📜",
+          "titre": "Culture",
+          "texte": "Les bibliothèques de Chinguetti abritent des manuscrits rares, témoins de l'âge d'or intellectuel de la région."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🌌",
+      "titre": "Détente et nuit étoilée à Chinguetti",
+      "legende": "Profitez d'une journée plus calme à Chinguetti, en vous imprégnant de l'atmosphère unique de cette ville du désert. Terminez la journée par une observation des étoiles.",
+      "lieu": "Chinguetti",
+      "activites": [
+        "<strong>🚶‍♀️ Balade douce dans les dunes environnantes</strong>: Admirez le coucher de soleil sur le désert.",
+        "<strong>☕ Thé à la menthe avec les habitants</strong>: Partagez un moment d'échange culturel.",
+        "<strong>✨ Observation des étoiles</strong>: Loin de toute pollution lumineuse, le ciel est spectaculaire."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Chinguetti",
+          "categorie": "Ville historique",
+          "coords": { "lat": 20.4500, "lng": -12.3667 }
+        }
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🧘",
+          "titre": "Relaxation",
+          "texte": "Le désert offre un silence et une immensité propices à la méditation et à la déconnexion."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🏰",
+      "titre": "Ouadane, l'ancienne cité caravanière",
+      "legende": "Poursuivez votre voyage vers Ouadane, une autre cité caravanière classée UNESCO. Explorez ses ruines imposantes et imaginez la vie d'antan.",
+      "lieu": "Ouadane",
+      "activites": [
+        "<strong>🚗 Trajet vers Ouadane</strong>: Une route désertique offrant des panoramas grandioses.",
+        "<strong>🏛️ Exploration des ruines de la vieille ville</strong>: Découvrez les vestiges d'une civilisation florissante.",
+        "<strong>🚶‍♂️ Promenade dans la palmeraie</strong>: Profitez de la fraîcheur des dattiers."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Ouadane",
+          "categorie": "Ville historique",
+          "coords": { "lat": 20.9333, "lng": -11.6167 }
+        }
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "🌍",
+          "titre": "Patrimoine",
+          "texte": "Ouadane était un carrefour commercial majeur sur la route transsaharienne, témoignant de l'importance des ksour."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🏜️",
+      "titre": "Autour d'Ouadane, entre oasis et désert",
+      "legende": "Profitez d'une journée pour explorer les environs d'Ouadane, entre les oasis verdoyantes et les étendues de sable. Une immersion douce dans le quotidien du désert.",
+      "lieu": "Ouadane",
+      "activites": [
+        "<strong>🚶‍♀️ Randonnée douce vers une oasis voisine</strong>: Découvrez des paysages cachés et des villages isolés.",
+        "<strong>🐪 Courte balade à dos de chameau</strong>: Une expérience authentique et relaxante dans les dunes.",
+        "<strong>🌅 Coucher de soleil sur les ruines d'Ouadane</strong>: Un spectacle inoubliable."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Ouadane",
+          "categorie": "Ville historique",
+          "coords": { "lat": 20.9333, "lng": -11.6167 }
+        }
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Les balades à dos de chameau sont une excellente façon de découvrir le désert à un rythme paisible."
+        }
+      ]
+    },
+    {
+      "jour": 11,
+      "symbole": "🏞️",
+      "titre": "L'oasis de Mhaïrith, un écrin de verdure",
+      "legende": "Direction l'oasis de Mhaïrith, un autre havre de paix au cœur du désert. Profitez de sa beauté naturelle et de son calme absolu pour une journée de pure détente.",
+      "lieu": "Oasis de Mhaïrith",
+      "activites": [
+        "<strong>🚗 Trajet vers l'oasis de Mhaïrith</strong>: Une route scénique à travers les paysages de l'Adrar.",
+        "<strong>🚶‍♀️ Exploration de l'oasis</strong>: Admirez les palmiers et les sources d'eau.",
+        "<strong>🧘 Moment de quiétude</strong>: Laissez-vous bercer par le silence du désert."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Oasis de Mhaïrith",
+          "categorie": "Oasis",
+          "coords": { "lat": 20.7000, "lng": -12.0000 }
+        }
+      ],
+      "illustration": "jour11.jpg",
+      "encarts": [
+        {
+          "symbole": "💚",
+          "titre": "Bien-être",
+          "texte": "Les oasis sont des lieux magiques pour se ressourcer, loin de l'agitation du monde moderne."
+        }
+      ]
+    },
+    {
+      "jour": 12,
+      "symbole": "⛺",
+      "titre": "Nuit en bivouac sous les étoiles",
+      "legende": "Vivez une expérience inoubliable en passant une nuit en bivouac dans le désert. Loin de tout, le silence et le ciel étoilé vous offriront un spectacle grandiose.",
+      "lieu": "Désert de l'Adrar",
+      "activites": [
+        "<strong>🚗 Installation du campement</strong>: Participez à la mise en place de votre bivouac.",
+        "<strong>🔥 Dîner traditionnel autour du feu</strong>: Savourez un repas préparé sur place.",
+        "<strong>✨ Nuit sous les étoiles</strong>: Une expérience magique et apaisante."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Désert de l'Adrar, Mauritanie",
+          "categorie": "Désert",
+          "coords": { "lat": 20.5000, "lng": -12.5000 }
+        }
+      ],
+      "illustration": "jour12.jpg",
+      "encarts": [
+        {
+          "symbole": "🌌",
+          "titre": "Expérience",
+          "texte": "Le ciel du désert est l'un des plus purs au monde, offrant une vue imprenable sur la Voie Lactée."
+        }
+      ]
+    },
+    {
+      "jour": 13,
+      "symbole": "🚶‍♀️",
+      "titre": "Randonnée douce et exploration du désert",
+      "legende": "Après une nuit sous les étoiles, profitez d'une matinée de randonnée douce dans les paysages désertiques. Découvrez la faune et la flore adaptées à cet environnement unique.",
+      "lieu": "Désert de l'Adrar",
+      "activites": [
+        "<strong>🚶‍♀️ Randonnée matinale</strong>: Explorez les dunes et les formations rocheuses à votre rythme.",
+        "<strong>🥪 Pique-nique dans le désert</strong>: Un repas simple mais savoureux au milieu de nulle part.",
+        "<strong>🚗 Retour vers Atar</strong>: Reprenez la route vers la ville pour une nuit plus confortable."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Désert de l'Adrar, Mauritanie",
+          "categorie": "Désert",
+          "coords": { "lat": 20.5000, "lng": -12.5000 }
+        },
+        {
+          "nom_recherche": "Atar",
+          "categorie": "Ville",
+          "coords": { "lat": 20.5130, "lng": -13.0480 }
+        }
+      ],
+      "illustration": "jour13.jpg",
+      "encarts": [
+        {
+          "symbole": "👟",
+          "titre": "Équipement",
+          "texte": "Prévoyez de bonnes chaussures de marche et suffisamment d'eau pour les excursions dans le désert."
+        }
+      ]
+    },
+    {
+      "jour": 14,
+      "symbole": "✈️",
+      "titre": "Retour à Nouakchott, fin de l'aventure désertique",
+      "legende": "Après avoir exploré les merveilles de l'Adrar, reprenez un vol interne pour Nouakchott. Profitez de cette journée pour vous reposer et vous remémorer vos souvenirs du désert.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>✈️ Vol interne Atar-Nouakchott</strong>: Un retour rapide à la capitale.",
+        "<strong>🛏️ Détente à l'hôtel</strong>: Reposez-vous après les journées d'exploration.",
+        "<strong>🍽️ Dîner dans un restaurant local</strong>: Savourez les saveurs de la ville."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport d'Atar, Atar",
+          "categorie": "Aéroport",
+          "coords": { "lat": 20.5000, "lng": -13.0500 }
+        },
+        {
+          "nom_recherche": "Aéroport International de Nouakchott-Oumtounsy, Nouakchott",
+          "categorie": "Aéroport",
+          "coords": { "lat": 19.9608, "lng": -14.4897 }
+        }
+      ],
+      "illustration": "jour14.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Les restaurants à Nouakchott offrent une variété de plats locaux et internationaux. N'hésitez pas à demander des recommandations."
+        }
+      ]
+    },
+    {
+      "jour": 15,
+      "symbole": "🛍️",
+      "titre": "Journée libre et shopping à Nouakchott",
+      "legende": "Profitez d'une journée libre pour explorer Nouakchott à votre guise. Faites du shopping pour des souvenirs, visitez des galeries d'art ou détendez-vous dans un café.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>🛍️ Achat de souvenirs</strong>: Trouvez des objets artisanaux uniques au marché.",
+        "<strong>☕ Pause café</strong>: Détendez-vous dans l'un des cafés de la ville.",
+        "<strong>🚶‍♂️ Balade dans les quartiers résidentiels</strong>: Observez la vie quotidienne mauritanienne."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Marché Capitale, Nouakchott",
+          "categorie": "Marché",
+          "coords": { "lat": 18.0820, "lng": -15.9770 }
+        }
+      ],
+      "illustration": "jour15.jpg",
+      "encarts": [
+        {
+          "symbole": "🎁",
+          "titre": "Souvenirs",
+          "texte": "Les bijoux en argent, les tissus teints et les articles en cuir sont des souvenirs populaires et authentiques."
+        }
+      ]
+    },
+    {
+      "jour": 16,
+      "symbole": "🌊",
+      "titre": "Excursion relaxante à la plage de Nouakchott",
+      "legende": "Passez une journée paisible au bord de l'océan Atlantique. La plage de Nouakchott offre un cadre idéal pour la détente, les balades et l'observation des pêcheurs.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>🏖️ Détente sur la plage</strong>: Profitez du soleil et de la brise marine.",
+        "<strong>🚶‍♀️ Longue balade le long du rivage</strong>: Observez les activités des pêcheurs locaux.",
+        "<strong>🌅 Coucher de soleil sur l'Atlantique</strong>: Un moment magique pour clore la journée."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Plage de Nouakchott",
+          "categorie": "Plage",
+          "coords": { "lat": 18.0770, "lng": -16.0030 }
+        }
+      ],
+      "illustration": "jour16.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Culture locale",
+          "texte": "Respectez les coutumes locales en matière de tenue vestimentaire, même à la plage."
+        }
+      ]
+    },
+    {
+      "jour": 17,
+      "symbole": "🕌",
+      "titre": "Découverte des mosquées et de l'architecture locale",
+      "legende": "Explorez l'aspect religieux et architectural de Nouakchott en visitant ses mosquées emblématiques et en admirant l'architecture moderne et traditionnelle.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>🕌 Visite de la Grande Mosquée</strong>: Admirez l'architecture islamique (de l'extérieur pour les non-musulmans).",
+        "<strong>🚶‍♂️ Promenade architecturale</strong>: Découvrez les bâtiments modernes et les maisons traditionnelles.",
+        "<strong>📚 Visite de la Bibliothèque Nationale</strong>: Un aperçu de la culture écrite mauritanienne."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Grande Mosquée de Nouakchott",
+          "categorie": "Mosquée",
+          "coords": { "lat": 18.0820, "lng": -15.9780 }
+        },
+        {
+          "nom_recherche": "Bibliothèque Nationale de Mauritanie, Nouakchott",
+          "categorie": "Bibliothèque",
+          "coords": { "lat": 18.0825, "lng": -15.9760 }
+        }
+      ],
+      "illustration": "jour17.jpg",
+      "encarts": [
+        {
+          "symbole": "🙏",
+          "titre": "Respect",
+          "texte": "Lors de la visite de lieux de culte, une tenue respectueuse est de mise (épaules et genoux couverts)."
+        }
+      ]
+    },
+    {
+      "jour": 18,
+      "symbole": "🎨",
+      "titre": "Art et culture mauritanienne",
+      "legende": "Plongez dans la scène artistique et culturelle de Nouakchott. Visitez des galeries, rencontrez des artistes locaux et découvrez l'expression créative du pays.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>🖼️ Visite de galeries d'art locales</strong>: Découvrez l'art contemporain mauritanien.",
+        "<strong>🎶 Rencontre avec des musiciens traditionnels</strong>: Écoutez les mélodies du désert.",
+        "<strong>🍽️ Dégustation de spécialités locales</strong>: Un dîner pour savourer les saveurs authentiques."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Centre Culturel Français de Nouakchott",
+          "categorie": "Centre culturel",
+          "coords": { "lat": 18.0800, "lng": -15.9750 }
+        }
+      ],
+      "illustration": "jour18.jpg",
+      "encarts": [
+        {
+          "symbole": "🎵",
+          "titre": "Musique",
+          "texte": "La musique mauritanienne, souvent jouée avec le tidinit (luth) et l'ardin (harpe), est riche et envoûtante."
+        }
+      ]
+    },
+    {
+      "jour": 19,
+      "symbole": "🧘‍♀️",
+      "titre": "Journée de bien-être et relaxation",
+      "legende": "Après ces jours d'exploration, offrez-vous une journée dédiée au bien-être. Profitez d'un massage, d'une séance de yoga ou simplement d'un moment de calme.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>💆‍♀️ Séance de massage relaxant</strong>: Détendez vos muscles après les voyages.",
+        "<strong>📚 Lecture et repos</strong>: Profitez du calme de votre hébergement ou d'un jardin.",
+        "<strong>🚶‍♂️ Balade au crépuscule</strong>: Une dernière promenade douce pour apprécier l'ambiance de la ville."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Nouakchott",
+          "categorie": "Ville",
+          "coords": { "lat": 18.0858, "lng": -15.9785 }
+        }
+      ],
+      "illustration": "jour19.jpg",
+      "encarts": [
+        {
+          "symbole": "🌸",
+          "titre": "Détente",
+          "texte": "Certains hôtels proposent des services de spa ou de bien-être, parfaits pour se ressourcer."
+        }
+      ]
+    },
+    {
+      "jour": 20,
+      "symbole": "📦",
+      "titre": "Préparation au départ et derniers instants",
+      "legende": "Profitez de cette dernière journée pour finaliser vos achats de souvenirs, revoir vos lieux préférés ou simplement vous détendre avant votre vol de retour.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>🛍️ Derniers achats de souvenirs</strong>: Trouvez les derniers cadeaux ou objets pour vous-même.",
+        "<strong>☕ Café et contemplation</strong>: Prenez un dernier café en observant la vie locale.",
+        "<strong>🧳 Préparation des bagages</strong>: Organisez vos affaires pour le départ du lendemain."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Nouakchott",
+          "categorie": "Ville",
+          "coords": { "lat": 18.0858, "lng": -15.9785 }
+        }
+      ],
+      "illustration": "jour20.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Conseil",
+          "texte": "Vérifiez les restrictions de poids et de taille de bagages de votre compagnie aérienne pour éviter les surprises."
+        }
+      ]
+    },
+    {
+      "jour": 21,
+      "symbole": "🛫",
+      "titre": "Départ de Nouakchott",
+      "legende": "C'est le moment de dire au revoir à la Mauritanie. Après un petit-déjeuner, transfert à l'aéroport pour votre vol retour, la tête remplie de souvenirs inoubliables.",
+      "lieu": "Nouakchott",
+      "activites": [
+        "<strong>🍳 Petit-déjeuner</strong>: Profitez d'un dernier repas mauritanien.",
+        "<strong>🚗 Transfert à l'aéroport</strong>: Rejoignez l'aéroport pour votre vol.",
+        "<strong>🛫 Vol retour</strong>: Départ de Nouakchott vers votre destination."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Aéroport International de Nouakchott-Oumtounsy, Nouakchott",
+          "categorie": "Aéroport",
+          "coords": { "lat": 19.9608, "lng": -14.4897 }
+        }
+      ],
+      "illustration": "jour21.jpg",
+      "encarts": [
+        {
+          "symbole": "👋",
+          "titre": "Au revoir",
+          "texte": "La Mauritanie, avec ses paysages désertiques et sa culture riche, laissera une empreinte durable dans vos souvenirs."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    { "titre": "Budget vol:", "legende": "A partir de 649 €/pers", "symbole": "🛬" },
+    { "titre": "Budget transports:", "legende": "Environ 1300 €/pers (vols internes, 4x4 avec chauffeur)", "symbole": "🚆" },
+    { "titre": "Budget repas:", "legende": "Environ 800 €/pers (30-50€/jour)", "symbole": "🥗" },
+    { "titre": "Budget logement:", "legende": "Environ 700 €/pers (3* hôtels/auberges)", "symbole": "🛏️" },
+    { "titre": "Budget activités:", "legende": "Environ 400 €/pers (entrées, guides, excursions)", "symbole": "🎭" }
+  ],
+  "periodes_ideales": [
+    { "titre": "Novembre à Mars", "symbole": "☀️" },
+    { "titre": "Avril et Octobre (plus chaud mais faisable)", "symbole": "🌡️" }
+  ],
+  "infos_pratiques": [
+    { "titre": "Le climat est désertique. Prévoir des vêtements légers et amples, un chapeau, des lunettes de soleil et de la crème solaire. Les nuits dans le désert peuvent être fraîches, même en mai.", "symbole": "☀️" },
+    { "titre": "La monnaie est l'Ouguiya mauritanienne (MRU). Les cartes de crédit sont acceptées dans les grands hôtels et restaurants de Nouakchott, mais le liquide est indispensable en dehors de la capitale.", "symbole": "💳" },
+    { "titre": "Le français est largement parlé, surtout dans les zones touristiques et urbaines. L'arabe est la langue officielle.", "symbole": "🗣️" },
+    { "titre": "Un visa est obligatoire pour les citoyens belges. Il peut être obtenu à l'arrivée à l'aéroport de Nouakchott. Vérifiez les dernières exigences avant le départ.", "symbole": "🛂" },
+    { "titre": "L'eau du robinet n'est pas potable. Consommez uniquement de l'eau en bouteille. Prévoyez des médicaments de base et un répulsif anti-moustiques.", "symbole": "💧" }
+  ],
+  "infos_decallees": [
+    {
+      "symbole": "🚂",
+      "titre": "Le train le plus long du monde",
+      "texte": "La Mauritanie abrite l'un des trains les plus longs et les plus lourds du monde, le train minéralier. Il transporte du minerai de fer sur plus de 700 km à travers le désert, et il est parfois possible de voyager à son bord, sur les wagons de minerai, pour une expérience hors du commun!"
+    },
+    {
+      "symbole": "👁️",
+      "titre": "L'Œil de l'Afrique",
+      "texte": "La structure de Richat, surnommée l'Œil de l'Afrique, est une formation géologique circulaire de 50 km de diamètre visible depuis l'espace. Son origine reste un mystère fascinant, entre cratère d'impact et dôme érodé."
+    }
+  ],
+  "specialites_culinaires": [
+    {
+      "symbole": "🍴",
+      "titre": "Thieboudienne",
+      "description": "Bien que d'origine sénégalaise, ce plat de riz au poisson et légumes est très populaire en Mauritanie. Un délice savoureux et nourrissant."
+    },
+    {
+      "symbole": "🍖",
+      "titre": "Mechoui",
+      "description": "De l'agneau ou du chameau rôti lentement à la broche, souvent servi lors des grandes occasions. La viande est tendre et parfumée, un vrai régal."
+    },
+    {
+      "symbole": "🥛",
+      "titre": "Zrig",
+      "description": "Une boisson rafraîchissante à base de lait de chamelle frais, souvent servie avec du sucre. Une spécialité locale à ne pas manquer pour une immersion culturelle."
+    }
+  ],
+  "liens_utiles": [
+    { "legende": "Vols", "titre": "Réserve ton vol", "url": "https://www.kayak.fr/flights/BRU-NKC/2026-05-04/2026-05-25", "symbole": "🛬" },
+    { "legende": "Infos officielles et inspirations", "titre": "Office National du Tourisme Mauritanien", "url": "https://www.tourisme.mr/", "symbole": "📘" },
+    { "legende": "Météo", "titre": "Météo Mauritanie", "url": "https://www.accuweather.com/fr/mr/mauritania-weather", "symbole": "🌤️" },
+    { "legende": "Conseils aux voyageurs", "titre": "France Diplomatie - Mauritanie", "url": "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/mauritanie/", "symbole": "⚠️" }
+  ]
+}
